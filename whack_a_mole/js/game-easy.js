@@ -16,7 +16,6 @@ window.onload = function() {
   function showBtnAnimation() {
     event.preventDefault();
     STARTBTN.classList.add('animate');
-    // 按钮动画延时，按钮动画结束后发生的事：换为正常状态（class中的animate去掉），开始按钮消失
     setTimeout(() => {
       STARTBTN.classList.remove('animate');
       STARTBTN.style.display = 'none';
@@ -27,7 +26,12 @@ window.onload = function() {
     resetScoreAndTime();
     peep();
     setTimeout(() => {
-      // TODO: 写当游戏时间结束后要发生的事
+      titleH1.innerText = 'TIME UP!';
+      ScoreBoard.innerText = score;
+      StartBtn.innerText = 'Replay';
+      StartBtn.style.display = 'inline-block';
+      timeUp = true;
+      clearTimeout(moleStay);
     }, gameTime)
   }
   /**
