@@ -47,9 +47,12 @@ window.onload = function() {
    * 出洞.
    */
   function peep() {
-    const TIME = randomTime(200, 1000);
-    const HOLE = randomHole(holes);
-    comeOutAndStop(HOLE, TIME);
+    if (!timeUp) {
+      clearTimeout(moleStay);
+      const TIME = getRandom(500, 1000);
+      const MOLE = getRandomMole(Moles);
+      comeOutAndStop(MOLE, TIME);
+    }
   }
   /**
    * 随机生成地鼠出洞的停留时间. 该时间其实是[min, max]间的随机数.
@@ -78,7 +81,7 @@ window.onload = function() {
    * @param hole 地鼠所出地洞.
    * @param time 地鼠停留时间.
    */
-  function comeOutAndStop(hole, time) {
+  function comeOutAndStop(mole, time) {
     // TODO: 写地鼠出洞并停留相应时间，如果游戏时间未结束(timeUp)，继续出洞(peep).
   }
   /**
