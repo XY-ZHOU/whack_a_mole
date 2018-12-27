@@ -96,7 +96,10 @@ window.onload = function() {
   /**
    * 打地鼠。为每个MOLES添加点击事件，点击后分数显示+1，地鼠入洞。
    */
-  MOLES.forEach(mole => mole.addEventListener('click', function(e) {
-    // TODO: 在这里写用户点击地鼠发生的事.
+  Moles.forEach(MOLE => MOLE.addEventListener('click', function(e) {
+    MOLE.classList.remove('up');
+    score += 1;
+    ScoreBoard.innerText = score;
+    peep();
   }));
 };
