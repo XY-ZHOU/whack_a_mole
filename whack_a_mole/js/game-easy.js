@@ -61,9 +61,8 @@ window.onload = function() {
    * @param max 随机数的上界.
    * @returns {number}
    */
-  function randomTime(min, max) {
-    // TODO: 写生成随机数的逻辑，
-    return 0;
+  function getRandom(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
   }
   /**
    * 随机选择地鼠钻出的地洞，如果与上一个是相同地洞，则重新选择一个地洞.
