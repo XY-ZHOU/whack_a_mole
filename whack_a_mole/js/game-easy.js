@@ -85,7 +85,13 @@ window.onload = function() {
    * @param time 地鼠停留时间.
    */
   function comeOutAndStop(mole, time) {
-    // TODO: 写地鼠出洞并停留相应时间，如果游戏时间未结束(timeUp)，继续出洞(peep).
+    if (!timeUp) {
+      mole.classList.add('up');
+      moleStay = setTimeout(function() {
+        mole.classList.remove('up');
+        peep();
+      }, time);
+    }
   }
   /**
    * 打地鼠。为每个MOLES添加点击事件，点击后分数显示+1，地鼠入洞。
