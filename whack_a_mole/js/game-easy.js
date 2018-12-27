@@ -38,7 +38,10 @@ window.onload = function() {
    * 初始化设置.
    */
   function resetScoreAndTime() {
-    // TODO: 写游戏的初始化设置
+    titleH1.innerText = 'WHACK-A-MOLE!';
+    timeUp = false;
+    score = 0;
+    ScoreBoard.innerText = score;
   }
   /**
    * 出洞.
