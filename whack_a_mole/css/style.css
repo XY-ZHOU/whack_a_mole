@@ -80,7 +80,6 @@ h1 {
   font-size: 2em;
   padding: 1em 2em;
   margin-top: 50px;
-  /*margin-bottom: 60px;*/
   -webkit-appearance: none;
   appearance: none;
   background-color: #FFA000;
@@ -91,6 +90,10 @@ h1 {
   position: relative;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px #FF9800;
+}
+
+.bubbly-button.disappear {
+  display: none;
 }
 
 .bubbly-button:focus {
